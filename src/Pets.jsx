@@ -24,9 +24,9 @@ function Pets() {
         setPets(prevPets => prevPets.filter(pet => pet.id !== id));
         alert("Record deleted!");
       })
-    //   .catch((error) => {
-    //     console.error("Error deleting pet:", error);
-    //   });
+      .catch((error) => {
+        console.error("Error deleting pet:", error);
+      });
   }
 
   function addPet(event) {
