@@ -29,6 +29,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: rgb(145, 26, 26);
+  /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv1UIIteuQjHJQ5zyOneaR8EE-eNOkXXR8LXHStgZkdfru7KNNfiSCQHdcCsPP1HQYVQo&usqp=CAU'); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
