@@ -60,4 +60,35 @@ function Pets() {
     setEditPetData(pet);
   }
 
-  
+  function updatePet(event) {
+    event.preventDefault();
+    const id = editPetData.id;
+    const updatedPet = {
+      name: event.target[0].value,
+      breed: event.target[1].value,
+      image_url: event.target[2].value
+    };
+
+    fetch(`http://localhost:9292/pets/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedPet)
+    })
+      .then((res) => res.json())
+      .then(() => {
+        const updatedPets = pets.map((pet) => {
+          if (pet.id === id) {
+            return { ...pet, ...updatedPet };
+          }
+          return pet;
+        });
+        setPets(updatedPets);
+        setEditPetData(null);
+        alert("Pet updated!");
+      })
+      .catch((error) => {
+        console.error("Error updating pet:", error);
+      });
+  }
