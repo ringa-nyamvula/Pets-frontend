@@ -107,6 +107,20 @@ function Pets() {
             <button onClick={() => editPet(pet)}>Edit</button>
           </div>
         ))}
-     
+      </ul>
+      <h2>{editPetData ? "Edit pet" : "Add new pet"}</h2>
+      {editPetData ? (
+        <form onSubmit={updatePet}>
+          <input defaultValue={editPetData.name} />
+          <input defaultValue={editPetData.breed} />
+          <input defaultValue={editPetData.image_url} />
+          <button type="submit">Update</button>
+          <button onClick={() => setEditPetData(null)}>Cancel</button>
+        </form>
+      ) 
+    </>
+  );
+}
+
 export default Pets;
 
