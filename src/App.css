@@ -32,7 +32,8 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-.background{
+
+.background {
   background-color: #000000;
 }
 
@@ -43,6 +44,7 @@
 .read-the-docs {
   color: #888;
 }
+
 .pet-card {
   width: 500px;
   height: 460px;
@@ -52,39 +54,90 @@
   background-color: black;
   color: white;
 }
-img {
+
+.pet-card img {
   width: 300px;
   height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-ul{
-  text-decoration: none;
+.pet-card p {
+  margin-top: 10px;
 }
 
-ul{
+.pet-card .button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.pet-card button {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pet-card button:hover {
+  background-color: #e53935;
+}
+
+.pet-card button:active {
+  background-color: #d32f2f;
+}
+
+ul {
   text-decoration: none;
   display: flex;
-  text-decoration: none;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px; 
+  gap: 10px;
 }
 
-#formO{
+#formO {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
-  margin-left: 20%;
-  gap: 0.9%;
+  margin: 0 auto;
+  gap: 10px;
 }
 
-#formO>*{
+#formO input {
+  padding: 0.5em;
+  border: 1px solid #ccc;
   border-radius: 10px;
 }
 
+#formO button {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-h1{
+#formO button:hover {
+  background-color: #45a049;
+}
+
+#formO button:active {
+  background-color: #3d8b40;
+}
+
+#formCard {
+  width: 300px;
+  padding: 2em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+h1 {
   color: white;
   text-decoration: underline;
 }
-
-
