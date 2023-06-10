@@ -117,7 +117,14 @@ function Pets() {
           <button type="submit">Update</button>
           <button onClick={() => setEditPetData(null)}>Cancel</button>
         </form>
-      ) 
+      ) : (
+        <form onSubmit={addPet}>
+          <input placeholder="name" />
+          <input placeholder="breed" />
+          <input placeholder="image_url" />
+          <button type="submit">Add</button>
+        </form>
+      )}
     </>
   );
 }
