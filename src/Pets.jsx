@@ -92,3 +92,21 @@ function Pets() {
         console.error("Error updating pet:", error);
       });
   }
+
+
+  return (
+    <>
+      <h1>PETS</h1>
+      <ul>
+        {pets.map((pet) => (
+          <div className="pet-card" key={pet.id}>
+            <li>{pet.name}</li>
+            <img src={pet.image_url} alt={pet.name} />
+            <p>{pet.breed}</p>
+            <button onClick={() => handleDelete(pet.id)}>Delete</button>
+            <button onClick={() => editPet(pet)}>Edit</button>
+          </div>
+        ))}
+     
+export default Pets;
+
